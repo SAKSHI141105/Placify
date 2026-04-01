@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Placify",
+    "version": "1.0",
+    "description": "Placement Email Assistant",
+    "permissions": [
+        "storage",
+        "notifications",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://mail.google.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://mail.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
