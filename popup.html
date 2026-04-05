@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 🔥 IMPORTANT FIX -->
+    <meta charset="UTF-8">
+
+    <title>Placify</title>
+
+    <style>
+        body {
+            width: 320px;
+            padding: 20px;
+            background: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 🔥 HEADER */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .logo {
+            width: 34px;
+            height: 34px;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #3b82f6;
+            letter-spacing: 1px;
+        }
+
+        /* INPUTS */
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: none;
+            background: #1e293b;
+            color: white;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            background: #334155;
+        }
+
+        /* ❌ REMOVE CGPA ARROWS */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        /* BUTTONS */
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .save {
+            background: #2563eb;
+            color: white;
+        }
+
+        .clear {
+            background: #ef4444;
+            color: white;
+        }
+
+        .save:hover {
+            opacity: 0.85;
+        }
+
+        .clear:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🔥 HEADER (FIXED) -->
+    <div class="header">
+        <img src="logo.png" class="logo">
+        <span class="title">PLACIFY</span>
+    </div>
+
+    <!-- INPUTS -->
+    <input id="name" type="text" placeholder="Full Name">
+    <input id="regNo" type="text" placeholder="Register Number">
+    <input id="neoPat" type="text" placeholder="NeoPat ID">
+    <input id="cgpa" type="number" placeholder="CGPA">
+
+    <!-- DEGREE -->
+    <select id="degree">
+        <option value="">Select Degree</option>
+
+        <optgroup label="UG">
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>B.Sc</option>
+            <option>B.Com</option>
+            <option>BBA</option>
+            <option>B.A</option>
+        </optgroup>
+
+        <optgroup label="PG">
+            <option>M.Tech</option>
+            <option>MCA</option>
+            <option>MBA</option>
+            <option>M.Sc</option>
+        </optgroup>
+
+        <optgroup label="Integrated">
+            <option>Integrated M.Tech</option>
+            <option>Integrated M.Sc</option>
+        </optgroup>
+
+        <optgroup label="Research">
+            <option>PhD</option>
+        </optgroup>
+    </select>
+
+    <!-- BUTTONS -->
+    <div class="btn-group">
+        <button id="saveBtn" class="save">Save Profile</button>
+        <button id="clearBtn" class="clear">Clear Data</button>
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
