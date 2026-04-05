@@ -1,6 +1,6 @@
 // 🔥 SUPABASE CONFIG (IMPORTANT)
-const SUPABASE_URL = "https://ywdyzrnpbkcuepbtarya.supabase.co";
-const SUPABASE_KEY = "sb_publishable_Pb1YvI6Szlzx1O_FcFbujQ_h3beD7a7"; // 👈 yaha apni key daal
+const SUPABASE_URL = "xxxx";
+const SUPABASE_KEY = "xxxx"; // 👈 yaha apni key daal
 
 // Buttons
 const saveBtn = document.getElementById("saveBtn");
