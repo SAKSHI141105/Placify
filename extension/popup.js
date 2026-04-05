@@ -1,6 +1,5 @@
-// 🔥 SUPABASE CONFIG (IMPORTANT)
 const SUPABASE_URL = "xxxx";
-const SUPABASE_KEY = "xxxx"; // 👈 yaha apni key daal
+const SUPABASE_KEY = "xxxx"; 
 
 // Buttons
 const saveBtn = document.getElementById("saveBtn");
