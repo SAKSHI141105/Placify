@@ -1,4 +1,4 @@
-console.log("Placify running 🚀");
+console.log("Placify running");
 
 let activeFilter = "all";
 
