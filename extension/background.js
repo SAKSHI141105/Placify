@@ -1,8 +1,8 @@
-console.log("Placify background running 🚀");
+console.log("Placify background running");
 
 // optional: jab extension install ho
 chrome.runtime.onInstalled.addListener(() => {
-    console.log("Placify installed successfully ✅");
+    console.log("Placify installed successfully");
 });
 
 // optional: jab tab change ho
