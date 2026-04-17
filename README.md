@@ -67,13 +67,4 @@ Placify addresses these issues by introducing automation and intelligent filteri
 
 ---
 
-## Project Structure
-Placify/
-└── extension/
-├── manifest.json
-├── popup.html
-├── popup.js
-├── content.js
-├── background.js
-├── style.css
-└── logo.png
+
