@@ -1,133 +1,441 @@
-body {
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+
     margin: 0;
+
     padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
-    width: 300px;
+
+    box-sizing: border-box;
 }
 
+>>>>>>> 503ff36 (Updated Placify AI extension)
+body {
+
+    width: 350px;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    background:
+        linear-gradient(135deg,
+            #020617,
+            #071129,
+            #0f172a);
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    color: white;
+
+    position: relative;
+}
+
+<<<<<<< HEAD
 /* CONTAINER */
+=======
+/* ===== GLOW ===== */
+
+.bg-glow {
+
+    position: absolute;
+
+    width: 240px;
+
+    height: 240px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(37, 99, 235, 0.18);
+
+    filter: blur(100px);
+
+    top: -100px;
+
+    right: -80px;
+
+    z-index: 0;
+}
+
+/* ===== CONTAINER ===== */
+>>>>>>> 503ff36 (Updated Placify AI extension)
 
 .container {
-    padding: 20px;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 16px 14px 12px;
 }
 
+<<<<<<< HEAD
 /* HEADER */
+=======
+/* ===== HEADER ===== */
+>>>>>>> 503ff36 (Updated Placify AI extension)
 
 .header {
+
     display: flex;
+
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+/* ===== LOGO ===== */
+
+.logo-box {
+
+    width: 56px;
+
+    height: 56px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border:
+        1px solid rgba(59, 130, 246, 0.18);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 0 20px rgba(37, 99, 235, 0.15);
 }
 
 .logo {
-    width: 35px;
-    height: 35px;
+
+    width: 36px;
 }
 
-h2 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 600;
+/* ===== TITLE ===== */
+
+.title-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
 }
 
+<<<<<<< HEAD
 /* INPUTS */
+=======
+.placify-title {
+
+    font-family:
+        'Orbitron',
+        sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+
+    background:
+        linear-gradient(135deg,
+            #ffffff,
+            #60a5fa);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== SUBTITLE ===== */
+
+.subtitle {
+
+    margin-top: 2px;
+
+    font-size: 10px;
+
+    font-weight: 300;
+
+    letter-spacing: 0.3px;
+
+    color: #94a3b8;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+}
+
+/* ===== FORM ===== */
+
+.form-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+/* ===== INPUT + SELECT ===== */
+>>>>>>> 503ff36 (Updated Placify AI extension)
 
 input,
 select {
+
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    border: none;
+
+    height: 56px;
+
+    padding: 0 18px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.02));
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    font-weight: 300 !important;
+
+    font-family:
+        'Poppins',
+        sans-serif !important;
+
     outline: none;
-    background: #334155;
-    color: white;
-    font-size: 14px;
+
+    transition: 0.3s;
+
+    text-shadow: none;
+
+    -webkit-text-fill-color: #94a3b8;
 }
+
+/* ===== PLACEHOLDER ===== */
 
 input::placeholder {
-    color: #cbd5f5;
+
+    color: #94a3b8;
+
+    font-weight: 300;
 }
 
+<<<<<<< HEAD
 /* BUTTONS */
+=======
+/* ===== FILLED INPUT ===== */
+
+input:not(:placeholder-shown) {
+
+    color: #cbd5e1;
+
+    -webkit-text-fill-color: #cbd5e1;
+
+    font-weight: 300 !important;
+}
+
+/* ===== SELECT ===== */
+
+.select-wrapper {
+
+    position: relative;
+}
+
+select {
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    -moz-appearance: none;
+
+    cursor: pointer;
+}
+
+/* ===== SELECT SELECTED VALUE ===== */
+
+select:valid {
+
+    color: #cbd5e1 !important;
+
+    -webkit-text-fill-color: #cbd5e1 !important;
+
+    font-weight: 300 !important;
+}
+
+/* ===== OPTIONS ===== */
+
+select option {
+
+    background: #071129;
+
+    color: #cbd5e1;
+
+    font-weight: 300 !important;
+}
+
+/* ===== FOCUS ===== */
+
+input:focus,
+select:focus {
+
+    border:
+        1px solid #3b82f6;
+
+    box-shadow:
+        0 0 14px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== REMOVE NUMBER SCROLL ===== */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+
+    -webkit-appearance: none;
+
+    margin: 0;
+}
+
+input[type=number] {
+
+    -moz-appearance: textfield;
+}
+
+/* ===== CUSTOM ARROW ===== */
+
+.select-wrapper::after {
+
+    content: "⌄";
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 18px;
+
+    transform: translateY(-50%);
+
+    color: #60a5fa;
+
+    font-size: 14px;
+
+    pointer-events: none;
+}
+
+/* ===== BUTTONS ===== */
+
+.btn-group {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 6px;
+}
+>>>>>>> 503ff36 (Updated Placify AI extension)
 
 button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
+
+    flex: 1;
+
+    height: 48px;
+
     border: none;
-    font-size: 14px;
+
+    border-radius: 16px;
+
     cursor: pointer;
-    transition: 0.2s ease;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    font-family:
+        'Poppins',
+        sans-serif;
 }
 
-/* Save Button */
-#saveBtn {
-    background: linear-gradient(135deg, #2563eb, #3b82f6);
+/* ===== SAVE ===== */
+
+.save {
+
+    background:
+        linear-gradient(135deg,
+            #2563eb,
+            #3b82f6);
+
     color: white;
-    margin-top: 5px;
+
+    box-shadow:
+        0 0 18px rgba(37, 99, 235, 0.3);
 }
 
-#saveBtn:hover {
-    transform: scale(1.03);
+/* ===== CLEAR ===== */
+
+.clear {
+
+    background:
+        rgba(239, 68, 68, 0.12);
+
+    border:
+        1px solid rgba(239, 68, 68, 0.35);
+
+    color: #f87171;
 }
 
-/* Clear Button */
-.danger {
-    background: #ef4444;
-    color: white;
-    margin-top: 8px;
+/* ===== HOVER ===== */
+
+.save:hover,
+.clear:hover {
+
+    transform:
+        translateY(-1px);
 }
 
-.danger:hover {
-    background: #dc2626;
-}
+/* ===== FOOTER ===== */
 
+<<<<<<< HEAD
 /* TOAST */
+=======
+.footer {
+>>>>>>> 503ff36 (Updated Placify AI extension)
 
-.toast {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    background: #1e293b;
-    color: white;
-    padding: 12px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-    animation: slideUp 0.3s ease;
-}
+    margin-top: 12px;
 
-/* Toast buttons */
-.toast-actions button {
-    margin-left: 8px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-}
+    text-align: center;
 
-/* Save Now */
-#confirmSave {
-    background: #22c55e;
-    color: white;
-}
+    font-size: 8px;
 
-#confirmSave:hover {
-    background: #16a34a;
-}
+    color: #64748b;
 
-/* Never */
-#cancelSave {
-    background: #475569;
-    color: white;
-}
+    letter-spacing: 1px;
 
+<<<<<<< HEAD
 #cancelSave:hover {
     background: #334155;
 }
@@ -150,3 +458,9 @@ button {
         opacity: 1;
     }
 }
+=======
+    font-family:
+        'Poppins',
+        sans-serif;
+}
+>>>>>>> 503ff36 (Updated Placify AI extension)

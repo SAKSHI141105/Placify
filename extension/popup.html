@@ -2,20 +2,18 @@
 <html>
 
 <head>
+<<<<<<< HEAD
     <!-- IMPORTANT FIX -->
+=======
+
+>>>>>>> 503ff36 (Updated Placify AI extension)
     <meta charset="UTF-8">
 
-    <title>Placify</title>
+    <title>Placify AI</title>
 
-    <style>
-        body {
-            width: 320px;
-            padding: 20px;
-            background: #0f172a;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
+<<<<<<< HEAD
         /* HEADER */
         .header {
             display: flex;
@@ -24,19 +22,15 @@
             gap: 10px;
             margin-bottom: 15px;
         }
+=======
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+>>>>>>> 503ff36 (Updated Placify AI extension)
 
-        .logo {
-            width: 34px;
-            height: 34px;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
 
-        .title {
-            font-size: 22px;
-            font-weight: bold;
-            color: #3b82f6;
-            letter-spacing: 1px;
-        }
+    <link rel="stylesheet" href="style.css">
 
+<<<<<<< HEAD
         /* INPUTS */
         input,
         select {
@@ -99,56 +93,217 @@
             opacity: 0.85;
         }
     </style>
+=======
+>>>>>>> 503ff36 (Updated Placify AI extension)
 </head>
 
 <body>
 
+<<<<<<< HEAD
     <!-- HEADER (FIXED) -->
     <div class="header">
         <img src="logo.png" class="logo">
         <span class="title">PLACIFY</span>
     </div>
+=======
+    <div class="bg-glow"></div>
+>>>>>>> 503ff36 (Updated Placify AI extension)
 
-    <!-- INPUTS -->
-    <input id="name" type="text" placeholder="Full Name">
-    <input id="regNo" type="text" placeholder="Register Number">
-    <input id="neoPat" type="text" placeholder="NeoPat ID">
-    <input id="cgpa" type="number" placeholder="CGPA">
+    <div class="container">
 
-    <!-- DEGREE -->
-    <select id="degree">
-        <option value="">Select Degree</option>
+        <!-- HEADER -->
 
-        <optgroup label="UG">
-            <option>B.Tech</option>
-            <option>BCA</option>
-            <option>B.Sc</option>
-            <option>B.Com</option>
-            <option>BBA</option>
-            <option>B.A</option>
-        </optgroup>
+        <div class="header">
 
-        <optgroup label="PG">
-            <option>M.Tech</option>
-            <option>MCA</option>
-            <option>MBA</option>
-            <option>M.Sc</option>
-        </optgroup>
+            <div class="logo-box">
 
-        <optgroup label="Integrated">
-            <option>Integrated M.Tech</option>
-            <option>Integrated M.Sc</option>
-        </optgroup>
+                <img src="logo.png" class="logo">
 
-        <optgroup label="Research">
-            <option>PhD</option>
-        </optgroup>
-    </select>
+            </div>
 
-    <!-- BUTTONS -->
-    <div class="btn-group">
-        <button id="saveBtn" class="save">Save Profile</button>
-        <button id="clearBtn" class="clear">Clear Data</button>
+            <div class="title-box">
+
+                <h1 class="placify-title">
+
+                    PLACIFY
+
+                </h1>
+
+                <p class="subtitle">
+
+                    Smart Placement Assistance
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+
+        <div class="form-box">
+
+            <input id="name" type="text" placeholder="Full Name">
+
+            <input id="regNo" type="text" placeholder="Register Number">
+
+            <input id="neoPat" type="text" placeholder="NeoPat ID">
+
+            <input id="cgpa" type="number" placeholder="CGPA">
+
+            <!-- DEGREE -->
+
+            <div class="select-wrapper">
+
+                <select id="degree">
+
+                    <option value="">
+                        Select Degree
+                    </option>
+
+                    <option>B.Tech</option>
+                    <option>M.Tech</option>
+                    <option>MCA</option>
+                    <option>MBA</option>
+                    <option>BCA</option>
+                    <option>B.Sc</option>
+                    <option>BBA</option>
+                    <option>B.Com</option>
+                    <option>B.Des</option>
+                    <option>B.Arch</option>
+                    <option>M.Sc</option>
+                    <option>PhD</option>
+
+                </select>
+
+            </div>
+
+            <!-- BRANCH -->
+
+            <div class="select-wrapper">
+
+                <select id="branch">
+
+                    <option value="">
+                        Select Branch
+                    </option>
+
+                    <option>
+                        Computer Science & Engineering (CSE)
+                    </option>
+
+                    <option>
+                        Information Technology (IT)
+                    </option>
+
+                    <option>
+                        Electronics & Communication (ECE)
+                    </option>
+
+                    <option>
+                        Electrical & Electronics Engineering (EEE)
+                    </option>
+
+                    <option>
+                        Mechanical Engineering
+                    </option>
+
+                    <option>
+                        Civil Engineering
+                    </option>
+
+                    <option>
+                        Chemical Engineering
+                    </option>
+
+                    <option>
+                        Biotechnology
+                    </option>
+
+                    <option>
+                        Electronics & Instrumentation
+                    </option>
+
+                    <option>
+                        Fashion Technology
+                    </option>
+
+                    <option>
+                        Embedded Systems
+                    </option>
+
+                    <option>
+                        VLSI Design
+                    </option>
+
+                    <option>
+                        Smart Manufacturing
+                    </option>
+
+                    <option>
+                        Business Systems
+                    </option>
+
+                    <option>
+                        Bioinformatics
+                    </option>
+
+                    <option>
+                        Biomedical Engineering
+                    </option>
+
+                    <option>
+                        Physics
+                    </option>
+
+                    <option>
+                        Chemistry
+                    </option>
+
+                    <option>
+                        Mathematics
+                    </option>
+
+                    <option>
+                        Agriculture
+                    </option>
+
+                    <option>
+                        Industrial Design
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div class="btn-group">
+
+            <button id="saveBtn" class="save">
+
+                Save Profile
+
+            </button>
+
+            <button id="clearBtn" class="clear">
+
+                Clear
+
+            </button>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            PLACIFY © 2026
+
+        </div>
+
     </div>
 
     <script src="popup.js"></script>
