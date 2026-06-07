@@ -1,313 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<<<<<<< HEAD
-    <!-- IMPORTANT FIX -->
-=======
-
->>>>>>> 503ff36 (Updated Placify AI extension)
     <meta charset="UTF-8">
-
-    <title>Placify AI</title>
-
+    <title>Placify — Placement Scanner</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-<<<<<<< HEAD
-        /* HEADER */
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-=======
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
->>>>>>> 503ff36 (Updated Placify AI extension)
-
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-<<<<<<< HEAD
-        /* INPUTS */
-        input,
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            border: none;
-            background: #1e293b;
-            color: white;
-        }
-
-        input:focus,
-        select:focus {
-            outline: none;
-            background: #334155;
-        }
-
-        /* REMOVE CGPA ARROWS */
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-
-        /* BUTTONS */
-        .btn-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        button {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .save {
-            background: #2563eb;
-            color: white;
-        }
-
-        .clear {
-            background: #ef4444;
-            color: white;
-        }
-
-        .save:hover {
-            opacity: 0.85;
-        }
-
-        .clear:hover {
-            opacity: 0.85;
-        }
-    </style>
-=======
->>>>>>> 503ff36 (Updated Placify AI extension)
 </head>
 
 <body>
+    <div class="app">
 
-<<<<<<< HEAD
-    <!-- HEADER (FIXED) -->
-    <div class="header">
-        <img src="logo.png" class="logo">
-        <span class="title">PLACIFY</span>
-    </div>
-=======
-    <div class="bg-glow"></div>
->>>>>>> 503ff36 (Updated Placify AI extension)
-
-    <div class="container">
-
-        <!-- HEADER -->
-
-        <div class="header">
-
-            <div class="logo-box">
-
-                <img src="logo.png" class="logo">
-
+        <!-- ═══════════ HEADER ═══════════ -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <img src="logo.png" class="brand-logo" onerror="this.style.display='none'">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">PLACIFY</span>
+                    <span class="brand-sub">Smart Placement Scanner</span>
+                </div>
             </div>
-
-            <div class="title-box">
-
-                <h1 class="placify-title">
-
-                    PLACIFY
-
-                </h1>
-
-                <p class="subtitle">
-
-                    Smart Placement Assistance
-
-                </p>
-
+            <div class="status-pill" id="statusPill">
+                <span class="status-dot" id="statusDot"></span>
+                <span class="status-label" id="statusLabel">Idle</span>
             </div>
+        </header>
 
+        <!-- ═══════════ STATS BAR (shown once scanned) ═══════════ -->
+        <div class="stats-bar" id="statsBar">
+            <div class="stat stat-red">
+                <span class="stat-num" id="statRed">–</span>
+                <span class="stat-lbl">Shortlisted</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat stat-yellow">
+                <span class="stat-num" id="statYellow">–</span>
+                <span class="stat-lbl">Eligible</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat stat-gray">
+                <span class="stat-num" id="statGray">–</span>
+                <span class="stat-lbl">Not for you</span>
+            </div>
         </div>
 
-        <!-- FORM -->
-
-        <div class="form-box">
-
-            <input id="name" type="text" placeholder="Full Name">
-
-            <input id="regNo" type="text" placeholder="Register Number">
-
-            <input id="neoPat" type="text" placeholder="NeoPat ID">
-
-            <input id="cgpa" type="number" placeholder="CGPA">
-
-            <!-- DEGREE -->
-
-            <div class="select-wrapper">
-
-                <select id="degree">
-
-                    <option value="">
-                        Select Degree
-                    </option>
-
-                    <option>B.Tech</option>
-                    <option>M.Tech</option>
-                    <option>MCA</option>
-                    <option>MBA</option>
-                    <option>BCA</option>
-                    <option>B.Sc</option>
-                    <option>BBA</option>
-                    <option>B.Com</option>
-                    <option>B.Des</option>
-                    <option>B.Arch</option>
-                    <option>M.Sc</option>
-                    <option>PhD</option>
-
-                </select>
-
-            </div>
-
-            <!-- BRANCH -->
-
-            <div class="select-wrapper">
-
-                <select id="branch">
-
-                    <option value="">
-                        Select Branch
-                    </option>
-
-                    <option>
-                        Computer Science & Engineering (CSE)
-                    </option>
-
-                    <option>
-                        Information Technology (IT)
-                    </option>
-
-                    <option>
-                        Electronics & Communication (ECE)
-                    </option>
-
-                    <option>
-                        Electrical & Electronics Engineering (EEE)
-                    </option>
-
-                    <option>
-                        Mechanical Engineering
-                    </option>
-
-                    <option>
-                        Civil Engineering
-                    </option>
-
-                    <option>
-                        Chemical Engineering
-                    </option>
-
-                    <option>
-                        Biotechnology
-                    </option>
-
-                    <option>
-                        Electronics & Instrumentation
-                    </option>
-
-                    <option>
-                        Fashion Technology
-                    </option>
-
-                    <option>
-                        Embedded Systems
-                    </option>
-
-                    <option>
-                        VLSI Design
-                    </option>
-
-                    <option>
-                        Smart Manufacturing
-                    </option>
-
-                    <option>
-                        Business Systems
-                    </option>
-
-                    <option>
-                        Bioinformatics
-                    </option>
-
-                    <option>
-                        Biomedical Engineering
-                    </option>
-
-                    <option>
-                        Physics
-                    </option>
-
-                    <option>
-                        Chemistry
-                    </option>
-
-                    <option>
-                        Mathematics
-                    </option>
-
-                    <option>
-                        Agriculture
-                    </option>
-
-                    <option>
-                        Industrial Design
-                    </option>
-
-                </select>
-
-            </div>
-
-        </div>
-
-        <!-- BUTTONS -->
-
-        <div class="btn-group">
-
-            <button id="saveBtn" class="save">
-
-                Save Profile
-
+        <!-- ═══════════ TABS ═══════════ -->
+        <nav class="tabs">
+            <button class="tab active" id="tabProfile">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                </svg>
+                Profile
             </button>
-
-            <button id="clearBtn" class="clear">
-
-                Clear
-
+            <button class="tab" id="tabResults">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="3" width="18" height="18" rx="3" />
+                    <polyline points="9 12 11 14 15 10" />
+                </svg>
+                Results
+                <span class="tab-badge" id="resultsBadge"></span>
             </button>
+        </nav>
+
+        <!-- ═══════════════════════════════════════════════════════
+         PROFILE PANEL
+    ═══════════════════════════════════════════════════════ -->
+        <div class="panel" id="panelProfile">
+
+            <p class="panel-intro">Your profile is used to match placement emails from CDC and detect personal
+                shortlists.</p>
+
+            <div class="field-row">
+                <div class="field">
+                    <label class="label">Full Name</label>
+                    <input id="name" type="text" class="input" placeholder="Arsh Sharan">
+                </div>
+                <div class="field">
+                    <label class="label">Register No.</label>
+                    <input id="regNo" type="text" class="input mono" placeholder="23BCI0030">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">
+                    NeoPat / Neo ID
+                    <span class="label-badge">Shortlist detection</span>
+                </label>
+                <input id="neoPat" type="text" class="input mono" placeholder="V3O5J3M4">
+                <span class="field-hint">Placify scans selection list emails for this exact ID</span>
+            </div>
+
+            <div class="field-row">
+                <div class="field">
+                    <label class="label">CGPA</label>
+                    <input id="cgpa" type="number" class="input" placeholder="8.5" step="0.1" min="0" max="10">
+                </div>
+                <div class="field">
+                    <label class="label">Degree</label>
+                    <select id="degree" class="input select-input">
+                        <option value="">Select</option>
+                        <option>B.Tech</option>
+                        <option>M.Tech</option>
+                        <option>MCA</option>
+                        <option>MBA</option>
+                        <option>B.Sc</option>
+                        <option>M.Sc</option>
+                        <option>PhD</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Branch</label>
+                <select id="branch" class="input select-input">
+                    <option value="">Select Branch</option>
+                    <option>Computer Science &amp; Engineering (CSE)</option>
+                    <option>Information Technology (IT)</option>
+                    <option>Electronics &amp; Communication (ECE)</option>
+                    <option>Electrical &amp; Electronics Engineering (EEE)</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Chemical Engineering</option>
+                    <option>Biotechnology</option>
+                    <option>Electronics &amp; Instrumentation</option>
+                    <option>Embedded Systems</option>
+                    <option>VLSI Design</option>
+                    <option>Bioinformatics</option>
+                    <option>Biomedical Engineering</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label class="label">Specialization <span class="label-opt">optional</span></label>
+                <input id="specialization" type="text" class="input"
+                    placeholder="e.g. Cyber Security · AI/ML · Networks">
+            </div>
+
+            <div class="action-row">
+                <button id="saveBtn" class="btn-primary">Save Profile</button>
+                <button id="clearBtn" class="btn-ghost">Clear All</button>
+            </div>
+            <div class="toast" id="toast"></div>
 
         </div>
 
-        <!-- FOOTER -->
+        <!-- ═══════════════════════════════════════════════════════
+         RESULTS PANEL
+    ═══════════════════════════════════════════════════════ -->
+        <div class="panel hidden" id="panelResults">
 
-        <div class="footer">
+            <!-- Scan bar -->
+            <div class="scan-bar">
+                <div>
+                    <div class="scan-label">Last scanned</div>
+                    <div class="scan-time" id="scanTime">Never</div>
+                </div>
+                <button id="scanNowBtn" class="btn-scan">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M1 4v6h6M23 20v-6h-6" />
+                        <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15" />
+                    </svg>
+                    Scan Now
+                </button>
+            </div>
 
-            PLACIFY © 2026
+            <!-- States -->
+            <div id="stateScanning" class="state hidden">
+                <div class="spinner"></div>
+                <p>Scanning your inbox…</p>
+            </div>
+            <div id="stateNoGmail" class="state hidden">
+                <div class="state-icon">📭</div>
+                <p>Open Gmail first, then click Scan Now.</p>
+            </div>
+            <div id="stateEmpty" class="state hidden">
+                <div class="state-icon">🔍</div>
+                <p>No results yet.</p>
+                <p class="state-sub">Click Scan Now to check your inbox.</p>
+            </div>
+
+            <!-- RED Section -->
+            <div id="secRed" class="sec hidden">
+                <div class="sec-head">
+                    <span class="sec-pip pip-red"></span>
+                    <span class="sec-title">Shortlist Alerts</span>
+                    <span class="sec-cnt cnt-red" id="cntRed"></span>
+                </div>
+                <div id="listRed" class="card-list"></div>
+            </div>
+
+            <!-- YELLOW Section -->
+            <div id="secYellow" class="sec hidden">
+                <div class="sec-head">
+                    <span class="sec-pip pip-yellow"></span>
+                    <span class="sec-title">Eligible Opportunities</span>
+                    <span class="sec-cnt cnt-yellow" id="cntYellow"></span>
+                </div>
+                <div id="listYellow" class="card-list"></div>
+            </div>
+
+            <!-- GRAY Section (collapsible) -->
+            <div id="secGray" class="sec hidden">
+                <button class="sec-toggle" id="toggleGray">
+                    <span class="sec-pip pip-gray"></span>
+                    <span class="sec-title gray-title">Not Eligible for You</span>
+                    <span class="sec-cnt cnt-gray" id="cntGray"></span>
+                    <svg class="toggle-chevron" id="chevronGray" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </button>
+                <div id="listGray" class="card-list gray-list collapsed"></div>
+            </div>
 
         </div>
+
+        <footer class="app-footer">All data stays on your device · No cloud storage</footer>
 
     </div>
-
     <script src="popup.js"></script>
-
 </body>
 
 </html>

@@ -1,0 +1,27 @@
+# =====================================================
+# Placify – .gitignore
+# =====================================================
+
+# --- Environment files ---
+.env
+.env.local
+.env.*.local
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor/IDE ---
+.vscode/
+.idea/
+*.suo
+*.user
+
+# --- Node (if a build step is added later) ---
+node_modules/
+dist/
+
+extension/placify-implementation-spec.md
+extension/placify-quick-reference.md
+extension/hierarchical-filtering-spec.md

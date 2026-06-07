@@ -21,14 +21,11 @@
     },
     "permissions": [
         "storage",
-        "activeTab",
-        "scripting",
-        "notifications"
+        "notifications",
+        "tabs"
     ],
     "host_permissions": [
-        "https://mail.google.com/*",
-        "https://ywdyzrnpbkcuepbtarya.supabase.co/*",
-        "http://localhost:5000/*"
+        "https://mail.google.com/*"
     ],
     "content_scripts": [
         {
